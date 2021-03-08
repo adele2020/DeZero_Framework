@@ -275,12 +275,10 @@ def as_variable(obj): #ndarray int float를 Variable인스턴스로 변환
         return obj
     return Variable(obj)
 
-def rsub(x0, x1):
-    x1 = as_array(x1)
  
 # 연산자를 그대로 사용할 수 있게 추가 
 Variable.__add__ = add
 Variable.__radd__ = add
 Variable.__mul__ = mul
 Variable.__rmul__ = mul
-Variable.__rsub__ = rsub    
+  
